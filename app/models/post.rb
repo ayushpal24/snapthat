@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
   validates :user_id, presence: true
   #validates :image, presence: true
   validates :caption, length: { minimum: 3 }
-  has_many :notifications, dependent: :destroy
+
 
 
   has_attached_file :image, styles: { :medium => "640x" }
